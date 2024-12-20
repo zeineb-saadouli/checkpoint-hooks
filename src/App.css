@@ -1,0 +1,157 @@
+/* Global Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #1e1e1e, #3a3a3a);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #ff9f43;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Movie List Styling */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.movie-card {
+  background: #292929;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ff9f43;
+}
+
+.movie-card h2 {
+  color: #ff9f43;
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.movie-card p {
+  font-size: 0.9rem;
+  padding: 0 15px 15px;
+  color: #cfcfcf;
+  text-align: center;
+}
+
+/* Filter Section Styling */
+.filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter input {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #3a3a3a;
+  color: #fff;
+  outline: none;
+  transition: transform 0.2s, border-color 0.3s;
+}
+
+.filter input:focus {
+  border-color: #ff9f43;
+  transform: scale(1.05);
+}
+
+/* Add Movie Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: #292929;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+form input {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #3a3a3a;
+  color: #fff;
+  outline: none;
+  transition: transform 0.2s, border-color 0.3s;
+}
+
+form input:focus {
+  border-color: #ff9f43;
+  transform: scale(1.05);
+}
+
+form button {
+  padding: 10px 20px;
+  background: #ff9f43;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+form button:hover {
+  background: #ff7e1a;
+  transform: scale(1.1);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
